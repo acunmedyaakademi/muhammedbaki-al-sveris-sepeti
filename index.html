@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alışveriş Sepeti</title>
+  <link rel="stylesheet" href="assets/css/alisveris-sepeti.css">
+  <script src="assets/js/alisveris-sepeti.js" defer></script>
+</head>
+
+<body>
+  <div class="container">
+    <form class="alısveris-form">
+      <label for="urunismi">Ürün İsmi =
+        <input type="text" class="ad" name="urunismi" placeholder="Lütfen adınızı ve soyadınızı giriniz">
+      </label>
+      <label for="renk">Rengi  =
+        <input type="text" class="tel" name="renk" placeholder="Lütfen telefon numaranızı giriniz">
+      </label>
+      <label for="fiyat">Fiyatı  =
+        <input type="number" class="tel" name="fiyat" placeholder="Lütfen telefon numaranızı giriniz">
+      </label>
+      
+      <label for="kategori">Kategoriler : 
+        <select name="kategori" required>
+          <option value="">Seçiniz</option>
+          <option value="ayakkabı">Ayakkabı</option>
+          <option value="çanta">Çanta</option>
+          <option value="aksesuar">Aksesuar</option>
+          <option value="pantolon">Pantolon</option>
+          <option value="gömlek">Gömlek</option>
+        </select>
+      </label>
+    
+    <button type="submit">Kaydet</button>
+    </form>
+
+    <div class="sepet">
+    </div>
+    <div class="sepetTutari"></div>
+
+    <div class="urunList">
+    </div>
+
+    <p class="clearStorage"><button class="garbage">🗑</button> Listeyi Temizle</p>
+  </div>
+</body>
+
+</html>
