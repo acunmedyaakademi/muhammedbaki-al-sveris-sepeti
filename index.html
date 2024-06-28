@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alışveriş Sepeti</title>
+  <link rel="stylesheet" href="assets/css/alisveris-sepeti.css">
+  <script src="assets/js/alisveris-sepeti.js" defer></script>
+</head>
+
+<body>
+  <div class="container">
+    <header class="AlisverisHeader">
+      <h1>Alışveriş Sepeti</h1>
+      <button id="addproductBtn">Ekle</button>
+    </header>
+
+    <dialog id="modal">
+      <h2 class="modelAddNew">Ürün Ekle</h2>
+      <h2 class="modelEdit">Ürün Düzenle</h2>
+
+      <form method="dialog" autocomplete="off"  class="alısveris-form" id="alisverisForm">
+        <label for="urunismi">Ürün İsmi =
+          <input type="text" class="ad" name="urunismi" placeholder="Lütfen adınızı ve soyadınızı giriniz">
+        </label>
+        <label for="renk">Rengi =
+          <input type="text" class="tel" name="renk" placeholder="Lütfen telefon numaranızı giriniz">
+        </label>
+        <label for="fiyat">Fiyatı =
+          <input type="number" class="tel" name="fiyat" placeholder="Lütfen telefon numaranızı giriniz">
+        </label>
+
+        <label for="kategori">Kategoriler :
+          <select name="kategori" required>
+            <option value="">Seçiniz</option>
+            <option value="ayakkabı">Ayakkabı</option>
+            <option value="çanta">Çanta</option>
+            <option value="aksesuar">Aksesuar</option>
+            <option value="pantolon">Pantolon</option>
+            <option value="gömlek">Gömlek</option>
+          </select>
+        </label>
+        <input type="hidden" name="id" value="">
+
+        <p><button class="modelAddNew">Ekle</button> <button class="modelEdit">Kaydet</button> <button type="button" onclick="alisverisForm.reset();modal.close();">Vazgeç</button></p>
+
+      </form>
+    </dialog>
+
+    <div class="sepet" id="sepet">
+    </div>
+    <div class="sepetTutari"></div>
+
+    <div class="urunList" id="urunList">
+    </div>
+
+    <p class="clearStorage"><button class="garbage">🗑</button> Listeyi Temizle</p>
+  </div>
+</body>
+
+</html>
